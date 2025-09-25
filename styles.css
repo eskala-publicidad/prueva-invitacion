@@ -1,0 +1,190 @@
+/* -------- Variables de colores -------- */
+:root {
+  --main-color: #be9407;
+  --secondary-color: #ffffff;
+  --text-color: #000000;
+  --background-overlay: rgba(0, 0, 0, 0.5);
+  --button-color: #b78c6b;
+  --button-hover: #a07658;
+}
+
+/* -------- Estilos generales -------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  color: var(--secondary-color);
+  text-align: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Fondo principal */
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('fotoo.jpg') no-repeat center center/cover; /* Cambiar fondo aquí */
+  z-index: -2;
+}
+
+.container {
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Foto y títulos */
+.hero {
+  animation: fadeIn 3s ease-in-out;
+  margin-bottom: 40px;
+}
+
+.couple-photo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 0px solid var(--secondary-color);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.couple-photo:hover {
+  transform: scale(1.2);
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-top: 15px;
+  color: var(--secondary-color);
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  color: var(--main-color);
+}
+
+/* Cronómetro */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 0%;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.countdown h3 {
+  width: 50%;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: center;
+}
+
+.time-box {
+  background: rgba(248, 248, 248, 0.137);
+  width: 90%;
+  max-width: 400%;
+  padding: 10px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  min-width: 50px;
+  text-align: center;
+}
+
+.time-box span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+/* Detalles */
+.details {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 20px auto;
+  animation: fadeInUp 2.5s ease-in-out;
+}
+
+.details h3 {
+  color: var(--main-color);
+  margin-bottom: 15px;
+}
+
+.details p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Confirmación */
+.attendance {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+#confirm-btn {
+  background: var(--button-color);
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+#confirm-btn:hover {
+  background: var(--button-hover);
+}
+
+.hidden {
+  display: none;
+}
+
+#confirm-message {
+  color: var(--main-color);
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* -------- Animaciones -------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------- Responsivo -------- */
+@media (max-width: 600px) {
+  .countdown {
+    flex-wrap: wrap;
+  }
+  .time-box {
+    min-width: 60px;
+  }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boda de Juan & María</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Fondo principal -->
+  <div class="background-overlay"></div>
+
+  <div class="container">
+    <!-- Foto de la pareja -->
+    <div class="hero">
+      <img src="pareja-2.png" alt="Juan y María" class="couple-photo">
+      <h1 class="title">¡Nos Casamos!</h1>
+      <h2 class="subtitle">María & Juan</h2>
+    </div>
+
+    <!-- Cronómetro -->
+    <div class="countdown">
+      <h3>Faltan:</h3>
+      <div class="time-box">
+        <span id="days">0</span>
+        <p>Días</p>
+      </div>
+      <div class="time-box">
+        <span id="hours">0</span>
+        <p>Horas</p>
+      </div>
+      <div class="time-box">
+        <span id="minutes">0</span>
+        <p>Minutos</p>
+      </div>
+      <div class="time-box">
+        <span id="seconds">0</span>
+        <p>Segundos</p>
+      </div>
+    </div>
+
+    <!-- Detalles de la boda -->
+    <div class="details">
+      <h3>Detalles de la Boda</h3>
+      <p><strong>Fecha:</strong> Sábado, 5 de octubre de 2025</p>
+      <p><strong>Hora:</strong> 11:00 (Ceremonia) / 14:00 (Recepción)</p>
+      <p><strong>Ceremonia:</strong> Iglesia de San Francisco, Calle de la Iglesia 12, Ciudad de México</p>
+      <p><strong>Recepción:</strong> Salón "El Jardín de las Flores", Avenida de las Flores 456, Ciudad de México</p>
+    </div>
+
+    <!-- Botón de confirmación de asistencia -->
+    <div class="attendance">
+      <h3>Confirma tu asistencia</h3>
+      <p>Personas confirmadas: <span id="attendance-count">0</span> / 500</p>
+      <button id="confirm-btn">Confirmar Asistencia</button>
+      <p id="confirm-message" class="hidden">¡Gracias por confirmar tu asistencia!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
